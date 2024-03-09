@@ -1,0 +1,14 @@
+def teste(number):
+    num1, num2 = 0, 1
+    while num2 < number:
+        num1, num2 = num2, num1 + num2
+    return num2 == number
+
+while True:
+    num = int(input("Informe um número (ou digite -1 para sair): "))
+    if num == -1:
+        break
+    if teste(num):
+        print(f"O número {num} pertence à sequência de Fibonacci.")
+    else:
+        print(f"O número {num} não pertence à sequência de Fibonacci. Tente novamente.")
